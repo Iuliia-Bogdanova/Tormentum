@@ -1,9 +1,13 @@
 import React from 'react';
+import AppRouter from './components/AppRouter';
 
-function App() {
+const App = () => {
   return (
-    <div>planner</div>
-  )
-}
+    <div>
+      {/* router */}
+      <AppRouter />
+    </div>
+  );
+};
 
 export default App;
