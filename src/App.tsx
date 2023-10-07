@@ -1,7 +1,7 @@
 import React from 'react';
 import AppRouter from './components/AppRouter';
 
-const App = () => {
+function App() {
   return (
     <div>
       {/* router */}
