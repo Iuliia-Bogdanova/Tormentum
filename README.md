@@ -5,4 +5,4 @@
 
 console.log(func("Brave Developers", "o", "l")); // выводит 11  
 
-console.log(func("Brave Developers", "z", "w")); // выводит -1
+console.log(func("Brave Developers", "c", "w")); // выводит -1
