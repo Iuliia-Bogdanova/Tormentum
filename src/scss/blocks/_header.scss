@@ -3,8 +3,37 @@
 	position: relative;
 	background-color: #c4c4c4;
 	color: #fff;
+	background-image: url(./../img/slider-bg/01.jpg);
+	background-size: cover;
 }
 
 .header a {
 	color: #fff;
+}
+
+.header__content {
+	position: absolute;
+	z-index: 9;
+	top: 50px;
+	left: 70px;
+	right: 70px;
+	bottom: 80px;
+
+	background-color: rgba($color: #fff, $alpha: .1);
+
+	pointer-events: none;
+
+	@media (max-width: 1200px) {
+		top: 40px;
+		left: 40px;
+		right: 40px;
+		bottom: 60px;
+	}
+
+	@media (max-width: 767px) {
+		top: 30px;
+		left: 5%;
+		right: 5%;
+		bottom: 30px;
+	}
 }
