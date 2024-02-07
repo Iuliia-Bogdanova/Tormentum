@@ -62,4 +62,19 @@
 	}
 }
 .slide__locations {
+    display: flex;
+    column-gap: 50px;
+    width: 70%;
+    margin: 0 auto;
+
+    @media (max-width: 1023px) {
+		width: 80%;
+        column-gap: 30px;
+	}
+
+    @media (max-width: 767px) {
+        width: 60%;
+        flex-direction: column;
+        row-gap: 30px;
+	}
 }
