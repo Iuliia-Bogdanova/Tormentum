@@ -70,12 +70,14 @@
 
 .header__scrollbar {
 	pointer-events: all;
+	
 	position: absolute;
 	right: 0;
-	top: 50%;
-	transform: translate(0%, -50%);
+	top: 45%;
+	transform: rotate(90deg) translate(50%, 0%);
+	transform-origin: right top;
 	
-	background-color: rgba($color: #fff, $alpha: .3);
-	height: 400px;
-	width: 10px;
+	// background-color: rgba($color: #fff, $alpha: .3);
+	height: 10px;
+	width: 400px;
 }
