@@ -1,19 +1,39 @@
 .slider-controls {
     display: grid;
-    gap: 15px;
+    gap: 20px;
 }
 
 .slider-controls__arrows {
     display: flex;
-    column-gap: 5px;
+    column-gap: 10px;
 
-    opacity: .3;
+    opacity: .5;
+}
+
+/* Скрыть иконку при наведении */
+.slider-controls__arrows .hover-icon {
+    display: none;
+}
+
+/* Показать иконку при наведении и скрыть обычную */
+#sliderPrev:hover .default-icon {
+    display: none;
+}
+#sliderPrev:hover .hover-icon {
+    display: inline;
+}
+
+#sliderNext:hover .default-icon {
+    display: none;
+}
+#sliderNext:hover .hover-icon {
+    display: inline;
 }
 
 .slider-controls__count {
     display: flex;
     column-gap: 10px;
-    justify-content: flex-end;
+    justify-content: center;
     align-items: flex-end;
 
     color: rgba($color: #fff, $alpha: .3);
@@ -27,4 +47,10 @@
     font-size: 32px;
     line-height: 0.75;
     color: rgba($color: #fff, $alpha: 1.0);
+    
+    cursor: pointer;
+
+    &:hover {
+        color: #970202;
+    }
 }

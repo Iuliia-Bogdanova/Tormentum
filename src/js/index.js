@@ -21,6 +21,7 @@ const swiper = new Swiper(".swiper", {
     pagination: {
         el: ".slider-controls__count",
         type: "fraction",
+        clickable: true,
     },
 
     navigation: {
@@ -33,7 +34,17 @@ const swiper = new Swiper(".swiper", {
     },
 
     autoplay: {
-        delay:  5000, 
+        delay: 5000,
+        disableOnInteraction: false,
     },
 });
 
+document.querySelectorAll(".slider-controls__count").forEach((element) => {
+    element.addEventListener("click", () => {
+        if (swiper.autoplay.running) {
+            swiper.autoplay.stop();
+        } else {
+            swiper.autoplay.start();
+        }
+    });
+});
