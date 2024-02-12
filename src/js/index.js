@@ -18,26 +18,22 @@ const swiper = new Swiper(".swiper", {
         enabled: true,
     },
 
-    // If we need pagination
     pagination: {
         el: ".slider-controls__count",
         type: "fraction",
     },
 
-    // Navigation arrows
     navigation: {
         nextEl: "#sliderNext",
         prevEl: "#sliderPrev",
     },
 
-    // And if we need scrollbar
     scrollbar: {
         el: ".swiper-scrollbar",
     },
 
-    // Enable autoplay and set delay between slides
     autoplay: {
-        delay:  5000, // Change the value to desired interval in milliseconds
+        delay:  5000, 
     },
 });
 
