@@ -5,6 +5,9 @@
 
     display: block;
 
+    font-size: 18px;
+    font-weight: 700;
+
     transform: rotate(-90deg) translate(0%, 100%);
     transform-origin: left bottom;
 
@@ -19,5 +22,9 @@
         height: 3px;
         background-color: #fff;
         opacity: .3;
+    }
+
+    &:hover {
+        color: #970202;
     }
 }

@@ -34,5 +34,10 @@ const swiper = new Swiper(".swiper", {
     scrollbar: {
         el: ".swiper-scrollbar",
     },
+
+    // Enable autoplay and set delay between slides
+    autoplay: {
+        delay:  5000, // Change the value to desired interval in milliseconds
+    },
 });
 

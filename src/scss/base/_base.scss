@@ -1,12 +1,44 @@
-@import url(https://fonts.googleapis.com/css?family=Montserrat:regular,500,600,700);
+@font-face {
+	font-family: 'Wolgadeutsche';
+	src: url('./../img/fonts/Wolgadeutsche.otf');
+}
+
+@font-face {
+	font-family: 'MedievalSharp';
+	src: url('./../img/fonts/MedievalSharp.ttf');
+}
+
+@font-face {
+	font-family: 'MedievalSharp-Bold';
+	src: url('./../img/fonts/MedievalSharp-Bold.ttf');
+}
+
+@font-face {
+	font-family: 'MedievalSharp-BoldOblique';
+	src: url('./../../img/fonts/MedievalSharp-BoldOblique.ttf');
+}
+
+@font-face {
+	font-family: 'MedievalSharp-Oblique';
+	src: url('./../../img/fonts/MedievalSharp-Oblique.ttf');
+}
 
 html {
 	scroll-behavior: smooth;
 }
 
 body {
+	font-family: 'MedievalSharp';
+	// font-family: 'MedievalSharp-Bold';
+	// font-family: 'MedievalSharp-BoldOblique';
+	// font-family: 'MedievalSharp-Oblique';
 	// background-color: var(--page-bg);
 	// color: var(--text-color);
     // font-family: var(--font-main);
-	font-family: 'Montserrat', sans-serif;
+	// font-family: 'Wolgadeutsche';
+}
+
+h1 {
+	font-family: 'Wolgadeutsche';
+	
 }

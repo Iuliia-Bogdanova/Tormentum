@@ -50,10 +50,6 @@
 	}
 }
 
-// .slide-first {
-//     background-image: url(./../img/slider-bg/1.jpg);
-// }
-
 .slide__header {
     text-align: center;
 }
@@ -74,7 +70,21 @@
     // font-size: 250px;
     font-size: 13vw;
     font-weight: 700;
-    line-height: 1.22;
+    line-height: 1.22; 
+    letter-spacing: .5vw; 
+
+    // background: linear-gradient(
+    //     0deg, 
+    //     #060000 20%,
+    //     #970202,
+    //     #f7f4f4 
+    //     );
+
+    // -webkit-background-clip: text;
+    // -webkit-text-fill-color: transparent;
+
+    // background-clip: text;
+    // text-fill-color: transparent;
 
     @media (max-width: 767px) {
 		font-size: 19vw;

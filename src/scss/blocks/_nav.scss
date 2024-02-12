@@ -17,7 +17,7 @@
         column-gap: 80px;
 
         font-weight: 600;
-        font-size: 20px;
+        font-size: 26px;
         line-height: 1.22;
     }
 }
@@ -25,11 +25,15 @@
 .nav__list a {
     position: relative;
 
+    &:hover {
+        color: #970202;
+    }
+
     &::before {
         content: '';
         position: absolute;
         width: 100%;
-        height: 1px;
+        height: 2px;
         background-color: #fff;
         bottom: -4px;
         left: 0;
@@ -41,6 +45,8 @@
     &:hover::before {
         transform-origin: right;
         transform: scaleX(1);
+
+        background: #970202;
     }
 }
 
