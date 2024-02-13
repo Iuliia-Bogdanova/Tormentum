@@ -1,0 +1,31 @@
+.section__nature {
+    padding-bottom: 20px;
+}
+
+.description__fauna {
+    width: 60%;
+
+    @media (max-width: 767px) {
+		width: 80%;
+	}
+}
+
+.description__flora {
+    width: 60%;
+    text-align: right;
+    margin-left: auto;
+
+    @media (max-width: 767px) {
+		width: 80%;
+	}
+}
+
+.description__races {
+    width: 60%;
+    text-align: center;
+    margin: 0 auto;
+
+    @media (max-width: 767px) {
+		width: 80%;
+	}
+}

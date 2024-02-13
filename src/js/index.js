@@ -33,10 +33,10 @@ const swiper = new Swiper(".swiper", {
         el: ".swiper-scrollbar",
     },
 
-    autoplay: {
-        delay: 5000,
-        disableOnInteraction: false,
-    },
+    // autoplay: {
+    //     delay: 5000,
+    //     disableOnInteraction: false,
+    // },
 });
 
 document.querySelectorAll(".slider-controls__count").forEach((element) => {
