@@ -13,16 +13,6 @@
 	src: url('./../img/fonts/MedievalSharp-Bold.ttf');
 }
 
-@font-face {
-	font-family: 'MedievalSharp-BoldOblique';
-	src: url('./../../img/fonts/MedievalSharp-BoldOblique.ttf');
-}
-
-@font-face {
-	font-family: 'MedievalSharp-Oblique';
-	src: url('./../../img/fonts/MedievalSharp-Oblique.ttf');
-}
-
 html {
 	scroll-behavior: smooth;
 }
@@ -30,11 +20,6 @@ html {
 body {
 	font-family: 'MedievalSharp';
 	// font-family: 'MedievalSharp-Bold';
-	// font-family: 'MedievalSharp-BoldOblique';
-	// font-family: 'MedievalSharp-Oblique';
-	// background-color: var(--page-bg);
-	// color: var(--text-color);
-    // font-family: var(--font-main);
 	// font-family: 'Wolgadeutsche';
 }
 
@@ -56,8 +41,20 @@ body::-webkit-scrollbar-thumb:hover {
 }
 
 main {
+	position: relative;
+	min-height:  100vh; 
+
 	background-color: rgb(62, 62, 62);
 	color: #fff;
+}
+
+.back__logo {
+	position: fixed;
+	right:  0px; 
+	bottom:  50px;
+
+	width: 120px;
+	height: 60px;
 }
 
 .section {
