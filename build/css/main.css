@@ -137,9 +137,9 @@ h1 {
   font-family: "Wolgadeutsche";
 }
 
-/* .none {
+.none {
   display: none !important;
-} */
+}
 
 .visually-hidden {
   position: absolute;
