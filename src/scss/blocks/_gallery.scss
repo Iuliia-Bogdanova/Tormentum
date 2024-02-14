@@ -31,7 +31,7 @@
 
     opacity: 0;
     z-index: 0;
-    transition: all 0.3s ease-in-out;
+    transition: all .7s ease-in-out;
 
     box-shadow: -2px 6px 10px 6px rgba($color: #000000, $alpha: 0.5);
 }
@@ -118,24 +118,30 @@
     gap: 30px;
 }
 
-.control-left,
-.control-right {
+.gallery-controls-previous,
+.gallery-controls-next {
     width: 40px;
 
     cursor: pointer;
 }
 
-.control-left {
+.gallery-controls-previous {
     rotate: 90deg;
 }
 
-.control-right {
+.gallery-controls-next {
     rotate: -90deg;
 }
 
-.gallery__text {
+.gallery-texts {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 30%;
+    gap: 10px;
+}
+
+.gallery-text {
+
 }

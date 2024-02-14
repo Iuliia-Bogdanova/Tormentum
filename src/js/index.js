@@ -1,5 +1,7 @@
-// import mobileNav from './modules/mobile-nav.js';
+// import mobileNav from './modules/mobile-nav.js'; 
 // mobileNav();
+
+import './modules/gallery-fauna';
 
 // import Swiper bundle with all modules installed
 import Swiper from 'swiper/bundle';
