@@ -104,22 +104,22 @@ class Carousel {
         });
     }
 
-    useControls() {
-        const triggers = Array.from(
-            galleryControlsContainer.getElementsByClassName(
-                "gallery-controls-previous"
-            ),
-            galleryControlsContainer.getElementsByClassName(
-                "gallery-controls-next"
-            )
-        );
-        triggers.forEach((control) => {
-            control.addEventListener("click", (e) => {
-                e.preventDefault();
-                this.setCurrentState(control);
-            });
-        });
-    }
+    // useControls() {
+    //     const triggers = Array.from(
+    //         galleryControlsContainer.getElementsByClassName(
+    //             "gallery-controls-previous"
+    //         ),
+    //         galleryControlsContainer.getElementsByClassName(
+    //             "gallery-controls-next"
+    //         )
+    //     );
+    //     triggers.forEach((control) => {
+    //         control.addEventListener("click", (e) => {
+    //             e.preventDefault();
+    //             this.setCurrentState(control);
+    //         });
+    //     });
+    // }
 }
 
 const exampleCarousel = new Carousel(
@@ -129,5 +129,20 @@ const exampleCarousel = new Carousel(
 );
 
 exampleCarousel.setControls();
-exampleCarousel.useControls();
+// exampleCarousel.useControls();
+
+// Обработчик событий для переключения слайдов с клавиатуры
+document.addEventListener('keydown', function(e) {
+    switch (e.code) {
+        case 'ArrowLeft': // Нажата клавиша "Влево"
+            exampleCarousel.setCurrentState({ className: "gallery-controls-previous" });
+            break;
+        case 'ArrowRight': // Нажата клавиша "Вправо"
+            exampleCarousel.setCurrentState({ className: "gallery-controls-next" });
+            break;
+        default: // Другие клавиши
+            // Ничего не делаем
+            break;
+    }
+});
 
