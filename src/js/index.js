@@ -1,8 +1,6 @@
 // import mobileNav from './modules/mobile-nav.js'; 
 // mobileNav();
 
-import './modules/gallery-fauna';
-
 // import Swiper bundle with all modules installed
 import Swiper from 'swiper/bundle';
 
@@ -35,10 +33,10 @@ const swiper = new Swiper(".swiper", {
         el: ".swiper-scrollbar",
     },
 
-    // autoplay: {
-    //     delay: 5000,
-    //     disableOnInteraction: false,
-    // },
+    autoplay: {
+        delay: 5000,
+        disableOnInteraction: false,
+    },
 });
 
 document.querySelectorAll(".slider-controls__count").forEach((element) => {
@@ -50,3 +48,5 @@ document.querySelectorAll(".slider-controls__count").forEach((element) => {
         }
     });
 });
+
+import "./modules/gallery-fauna";
