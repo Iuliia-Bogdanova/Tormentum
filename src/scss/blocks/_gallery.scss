@@ -1,5 +1,6 @@
-.gallery {
-    width: 80%;
+.gallery-fauna {
+    display: flex;
+    flex-direction: row;
 }
 
 .gallery-container {
@@ -10,7 +11,7 @@
     align-items: center;
     height: 420px;
     margin: 0 auto;
-    // max-width: 1000px;
+    max-width: 60%;
     padding-bottom: 20px;
 }
 
