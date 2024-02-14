@@ -14,9 +14,9 @@ const swiper = new Swiper(".swiper", {
     parallax: true,
     speed: 1000,
 
-    keyboard: {
-        enabled: true,
-    },
+    // keyboard: {
+    //     enabled: true,
+    // },
 
     pagination: {
         el: ".slider-controls__count",
