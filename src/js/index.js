@@ -39,17 +39,7 @@ const swiper = new Swiper(".swiper", {
     },
 });
 
-document.querySelectorAll(".slider-controls__count").forEach((element) => {
-    element.addEventListener("click", () => {
-        if (swiper.autoplay.running) {
-            swiper.autoplay.stop();
-        } else {
-            swiper.autoplay.start();
-        }
-    });
-});
-
-// import "./modules/gallery-fauna";
+// Fauna gallery
 
 const galleryContainer = document.querySelector(".gallery-items");
 const galleryControlsContainer = document.querySelector(".gallery-controls");
@@ -57,10 +47,12 @@ const galleryControls = ["previous", "next"];
 const galleryItems = document.querySelectorAll(".gallery-item");
 
 class Carousel {
-    constructor(container, items, controls) {
+    constructor(container, items, controls, texts) {
         this.carouselContainer = container;
         this.carouselControls = controls;
         this.carouselArray = [...items];
+        this.carouselTexts = [...texts]; // Новый массив для хранения текстовых блоков
+        this.currentIndex = 4; // Начальный индекс
     }
 
     updateGallery() {
@@ -82,12 +74,23 @@ class Carousel {
     }
 
     setCurrentState(direction) {
-        if (direction.className === "gallery-controls-previous") {
-            this.carouselArray.unshift(...this.carouselArray.splice(-1));
+        let movedElement;
+        if (direction === "previous") {
+            // Перемещаем первый элемент в конец массива
+            movedElement = this.carouselArray.shift();
+            this.carouselArray.push(movedElement);
+            this.currentIndex =
+                (this.currentIndex - 1 + this.carouselArray.length) %
+                this.carouselArray.length;
         } else {
-            this.carouselArray.push(...this.carouselArray.splice(0, 1));
+            // Перемещаем последний элемент в начало массива
+            movedElement = this.carouselArray.pop();
+            this.carouselArray.unshift(movedElement);
+            this.currentIndex =
+                (this.currentIndex + 1) % this.carouselArray.length;
         }
         this.updateGallery();
+        this.showText();
     }
 
     setControls() {
@@ -98,51 +101,44 @@ class Carousel {
             if (existingButton) {
                 existingButton.addEventListener("click", (e) => {
                     e.preventDefault();
-                    this.setCurrentState(existingButton);
+                    this.setCurrentState(control);
                 });
             }
         });
     }
 
-    // useControls() {
-    //     const triggers = Array.from(
-    //         galleryControlsContainer.getElementsByClassName(
-    //             "gallery-controls-previous"
-    //         ),
-    //         galleryControlsContainer.getElementsByClassName(
-    //             "gallery-controls-next"
-    //         )
-    //     );
-    //     triggers.forEach((control) => {
-    //         control.addEventListener("click", (e) => {
-    //             e.preventDefault();
-    //             this.setCurrentState(control);
-    //         });
-    //     });
-    // }
+    showText() {
+        this.carouselTexts.forEach((text, index) => {
+            text.style.display = index === this.currentIndex ? "block" : "none";
+        });
+    }
 }
+
+const galleryTexts = document.querySelectorAll(".gallery-text");
 
 const exampleCarousel = new Carousel(
     galleryContainer,
     galleryItems,
-    galleryControls
+    galleryControls,
+    galleryTexts
 );
 
 exampleCarousel.setControls();
-// exampleCarousel.useControls();
+exampleCarousel.showText(); 
 
-// Обработчик событий для переключения слайдов с клавиатуры
-document.addEventListener('keydown', function(e) {
+// Обработчик событий для переключения слайдов с клавиатуры 
+document.addEventListener("keydown", function (e) {
     switch (e.code) {
-        case 'ArrowLeft': // Нажата клавиша "Влево"
-            exampleCarousel.setCurrentState({ className: "gallery-controls-previous" });
+        case "ArrowLeft": // Нажата клавиша "Влево"
+            exampleCarousel.setCurrentState("previous");
             break;
-        case 'ArrowRight': // Нажата клавиша "Вправо"
-            exampleCarousel.setCurrentState({ className: "gallery-controls-next" });
+        case "ArrowRight": // Нажата клавиша "Вправо"
+            exampleCarousel.setCurrentState("next");
             break;
         default: // Другие клавиши
             // Ничего не делаем
             break;
     }
 });
+
 
