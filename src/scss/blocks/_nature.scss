@@ -4,7 +4,8 @@
 .section__nature {
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 10px;
+    padding-top: 0;
     padding-bottom: 20px;
 }
 
@@ -47,6 +48,7 @@
 
 .races__subtitle {
   text-align: center;
+  margin-top: 20px;
 }
 
 .description__races {
@@ -67,6 +69,7 @@
     gap:  10px;
     align-items: center; 
     justify-items: center;
+    padding: 20px 0;
     margin-bottom: 20px;
 }
 
