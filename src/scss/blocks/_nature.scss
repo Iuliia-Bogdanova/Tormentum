@@ -1,10 +1,13 @@
 .section__nature {
-    padding-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding-bottom: 40px;
 }
 
 .description__fauna {
     width: 60%;
-    padding-bottom: 40px;
+    padding-bottom: 30px;
 
     @media (max-width: 767px) {
 		width: 80%;
@@ -13,6 +16,7 @@
 
 .description__flora {
     width: 60%;
+    padding-bottom: 30px;
     text-align: right;
     margin-left: auto;
 
