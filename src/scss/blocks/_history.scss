@@ -26,9 +26,9 @@
 
 .history__grid {
     display: grid;
-    grid-template-columns: repeat(3,  1fr);
-    grid-template-rows: repeat(3,  1fr); 
-    gap:  20px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, min-content); 
+    gap: 30px;
     align-items: center; 
     justify-items: center;
     margin: 50px 0;
