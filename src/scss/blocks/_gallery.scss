@@ -133,6 +133,23 @@
     rotate: -90deg;
 }
 
+/* Скрыть иконку при наведении */
+.gallery-controls-previous .hover-icon,
+.gallery-controls-next .hover-icon {
+    display: none;
+}
+
+/* Показать иконку при наведении и скрыть обычную */
+.gallery-controls-previous:hover .default-icon,
+.gallery-controls-next:hover .default-icon {
+    display: none;
+}
+
+.gallery-controls-previous:hover .hover-icon,
+.gallery-controls-next:hover .hover-icon {
+    display: inline;
+}
+
 .gallery-texts {
     display: flex;
     flex-direction: column;

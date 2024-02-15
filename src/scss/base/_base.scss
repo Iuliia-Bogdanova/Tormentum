@@ -44,7 +44,7 @@ main {
 	position: relative;
 	min-height:  100vh; 
 
-	background-color: rgb(62, 62, 62);
+	background-color: #5f3636;
 	color: #fff;
 }
 
@@ -55,6 +55,19 @@ main {
 
 	width: 80px;
 	rotate: 180deg;
+}
+
+/* Скрыть иконку при наведении */
+.back__logo .hover-icon {
+    display: none;
+}
+
+/* Показать иконку при наведении и скрыть обычную */
+.back__logo:hover .default-icon {
+    display: none;
+}
+.back__logo:hover .hover-icon {
+    display: inline;
 }
 
 .section {

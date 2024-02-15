@@ -16,16 +16,12 @@
 }
 
 /* Показать иконку при наведении и скрыть обычную */
-#sliderPrev:hover .default-icon {
-    display: none;
-}
-#sliderPrev:hover .hover-icon {
-    display: inline;
-}
-
+#sliderPrev:hover .default-icon,
 #sliderNext:hover .default-icon {
     display: none;
 }
+
+#sliderPrev:hover .hover-icon,
 #sliderNext:hover .hover-icon {
     display: inline;
 }
