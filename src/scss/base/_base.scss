@@ -30,13 +30,13 @@ body {
 /* Custom scrollbar */
 
 body::-webkit-scrollbar {
-    background: rgb(62, 62, 62);
+	background-color: #5f3636;
     width: 8px;
     height: 6px;
 }
 
 body::-webkit-scrollbar-thumb {
-	background-color: #c4c4c4;
+	background-color: #292021;
     border-radius: 10px;
 }
 
