@@ -3,4 +3,6 @@ TW! — The presentation may contain unpleasant images or touch upon unpleasant 
 Rate 18+  
 game blood horror
 storytelling
-violence
+violence  
+
+desktop version
